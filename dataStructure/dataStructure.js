@@ -80,8 +80,25 @@ class Graph {
         }
     }
 
-    dfs() {
-
+    dfs(callback) {
+        let color = this.initColor();
+        for(let i = 0;i < this.vertices.length;i++) {
+            if(color[this.vertices[i]] === 'white') {
+                color[this.vertices[i]] = 'grey';
+                this.dfsAct(color,this.vertices[i],callback);
+            }
+        }
+    }
+    dfsAct(color,vertex,callback) {
+        callback(vertex);
+        let neighbors = this.neighborList[vertex];
+        for(let j = 0;j < neighbors.length;j++) {
+            if(color[neighbors[j]] === 'white') {
+                color[neighbors[j]] = 'grey';
+                this.dfsAct(color, neighbors[j], callback);
+            }
+        }
+        color[vertex] = 'black';
     }
     DFS() {
 
@@ -122,3 +139,4 @@ graph.addEdge('e',['i']);
 
 // console.log(graph.toString());
 // graph.BFS('a',console.log);
+// graph.dfs(console.log);
