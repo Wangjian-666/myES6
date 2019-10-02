@@ -59,7 +59,7 @@
 // console.log(Array.isArray(arr1));//output:false
 
 /*
-    Array.of()
+    5Array.of()
     此方法是对new Array()实例化时参数带来的不确定的语意行为
  */
 // let arr1 = new Array();//output:[]
@@ -72,7 +72,7 @@
 // console.log(arr4,arr5,arr6);
 
 /*
-    Array.prototype.concat()
+    6Array.prototype.concat()
     用于合并两个或多个数组，不会更改现有数组
  */
 // let arr1 = [1,2,3,4];
@@ -86,7 +86,7 @@
  */
 
 /*
-    Array.prototype.copyWithin()
+    7Array.prototype.copyWithin()
     浅复制数组中的一部分到同一数组，并返回它，不会改变数组的长度
     (start,copyStart,copyEnd)
  */
@@ -99,7 +99,7 @@
 // console.log(result,arr);//output:[4,5,6,5,6],[4,5,6,5,6]
 
 /*
-    Array.prototype.entries()
+    8Array.prototype.entries()
     返回一个新的Array Iterator对象 该对象包含数组中每个索引的键/对
  */
 // let arr = [1,2,3,4];
@@ -110,7 +110,7 @@
 // }
 
 /*
-    Array.prototype.every()
+    9Array.prototype.every()
     方法测试数组中的所有元素是否通过某个指定的函数的测试它返回一个布尔值
     (callback)
  */
@@ -118,7 +118,7 @@
 // console.log(arr.every(item => item.hasOwnProperty('length')));//output:false
 
 /*
-    Array.prototype.fill()
+    10Array.prototype.fill()
     用于一个固定值填充一个数组中，从起始索引到终止索引的全部元素
     不包括终止索引，不会改变数组的length
     (fillItem,fillStart,fillEnd)
@@ -128,7 +128,7 @@
 // console.log(arr,result);//output:[ 1, 0, 3, 4 ] [ 1, 0, 3, 4 ]
 
 /*
-    Array.prototype.filter()
+    11Array.prototype.filter()
     创建一个新数组其包含通过所提供函数实现的测试的所有元素
     原始数组不会改变
  */
@@ -142,7 +142,7 @@
 // console.log(arr,result);//output:[ 1, 2, 3, 4 ] [ 2, 3, 4 ]
 
 /*
-    Array.prototype.find()
+    12Array.prototype.find()
     返回数组中满足提供函数的第一个元素的值，否则返回undefined（无返回）
     (callback(item,index,array),thisArg)
  */
@@ -153,7 +153,7 @@
 // console.log(result,arr);//output:98,[ 96, 97, 98, 99 ]
 
 /*
-    Array.prototype.findIndex()
+    13Array.prototype.findIndex()
     返回数组中满足提供函数的第一个元素的索引
     否则返回-1
     (callback(item,index,array),thisArg)
@@ -165,7 +165,7 @@
 // console.log(result,arr);//output:4,[1,2,3,4]
 
 /*
-    Array.prototype.flat()
+    14Array.prototype.flat()
     按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并返回
     (callback(item,index,array),thisArg)
  */
@@ -199,7 +199,7 @@
 // console.log(result,arr);//[ 0, 2, 6, 12, 20, 30 ] [ [ 1, 2, 3 ], [ 4, 5, 6 ] ]
 
 /*
-    Array.prototype.flatMap()
+    15Array.prototype.flatMap()
     首先使用映射函数映射每一个元素，然后将结果压缩成一个新数组，它与map深度为1的flat函数
     几乎相同，但是flatMap()通常在合并一维数组效率稍高一点
  */
@@ -209,7 +209,7 @@
 // }));
 
 /*
-    Array.prototype.forEach()
+    16Array.prototype.forEach()
     方法对数组中对每一个元素执行一次所提供函数
     (callback(item,index,array),thisArg)
  */
@@ -221,28 +221,28 @@
 // console.log(result,arr);//undefined,[ 1, 2, 3, 4, 5, 6 ]
 
 /*
-    Array.prototype.includes()
+    17Array.prototype.includes()
     判断一个数组中是否包含一个指定对值，根据情况，如果包含则返回true，否则返回false
  */
 // let arr = [1,2,3,4];
 // console.log(arr.includes(4));//output:true
 
 /*
-    Array.prototype.indexOf()
+    18Array.prototype.indexOf()
     返回找到值的索引
  */
 // let arr = [1,2,3,4];
 // console.log(arr.indexOf(3));//output:3
 
 /*
-    Array.prototype.join()
+    19Array.prototype.join()
     将一个数组或者类似数组的对象的所有元素连接成一个字符串并返回这个字符串
  */
 // let arr = [[[1,2,3]]];
 // console.log(arr.join(''));//outpur:'1,2,3'
 
 /*
-    Array.prototype.keys()
+    20Array.prototype.keys()
     类似Array.prototype.entries() 不过返回的是索引
  */
 // let arr = ['a','b','c','d'];
@@ -253,14 +253,14 @@
 // }
 
 /*
-    Array.prototype.lastIndexOf()
+    21Array.prototype.lastIndexOf()
     返回最后一个出现的位置
  */
 // let arr = ['a','b','a','c'];
 // console.log(arr.lastIndexOf('a'));//output:2
 
 /*
-    Array.prototype.map()
+    22Array.prototype.map()
     和forEach()方法类似不过返回数组
     (callback(item,index,array),thisArg)
  */
@@ -271,7 +271,7 @@
 // console.log(result);//[ 1, 8, 27, 64 ]
 
 /*
-    Array.prototype.pop()
+    23Array.prototype.pop()
     返回删除数组的最后一个元素，如果为空返回undefined
     改变数组的长度
  */
@@ -279,7 +279,7 @@
 // console.log(arr.pop(),arr);//output:4,[ 1, 2, 3 ]
 
 /*
-    Array.prototype.push()
+    24Array.prototype.push()
     方法将一个或者多个元素追加到数组中,返回新数组的长度
     改变数组的长度
  */
@@ -287,7 +287,7 @@
 // console.log(arr.push('1',[2],null,undefined,true,{}),arr);
 
 /*
-    Array.prototype.reduce()
+    25Array.prototype.reduce()
     方法对数组中的每一个元素执行一个提供的函数，并将其结果汇总为单个值返回
     (callback(acc,item,index,array),acc)
  */
@@ -298,7 +298,7 @@
 // console.log(result);//output:126
 
 /*
-    Array.prototype.reduceRight()
+    26Array.prototype.reduceRight()
     方法和reduce类似,遍历顺序为从右往左
     (callback(acc,item,index,array),acc)
  */
@@ -310,7 +310,7 @@
 // console.log(result);//3 2 1 0 126
 
 /*
-    Array.prototype.reverse()
+    27Array.prototype.reverse()
     反转数组
     改变原有数组
  */
@@ -318,7 +318,7 @@
 // console.log(arr.reverse(),arr);//output:[ 4, 3, 2, 1 ] [ 4, 3, 2, 1 ]
 
 /*
-    Array.prototype.shift()
+    28Array.prototype.shift()
     方法和pop()方法类似 返回删除数组的第一个数组
     改变数组
  */
@@ -326,7 +326,7 @@
 // console.log(arr.shift(),arr);//output:1,[2,3,4]
 
 /*
-    Array.prototype.slice()
+    29Array.prototype.slice()
     返回截取的数组的浅拷贝
  */
 // let arr = [{name:'name'},1,2,[1,2,3]];
@@ -335,7 +335,7 @@
 // console.log(result,arr);//output:[ { name: 'changeName' } ] [ { name: 'changeName' }, 1, 2, [ 1, 2, 3 ] ]
 
 /*
-    Array.prototype.some()
+    30Array.prototype.some()
     方法测试数组中的元素是否有满足给定函数的值
     返回true/false
     (callback(item,index,array),thisArg)
@@ -346,7 +346,7 @@
 // },[1,2,3,4]));//output:true
 
 /*
-    Array.prototype.sort()
+    31Array.prototype.sort()
     基于原地算法对数组进行排序
     改变数组
  */
@@ -355,7 +355,7 @@
 // console.log(arr.sort((a,b) => a - b));//output:[ 7, 8, 9, 10 ]
 
 /*
-    Array.prototype.splice()
+    32Array.prototype.splice()
     通过删除或者添加元素,删除元素返回删除的元素,否则返回空数组
     改变数组
     (start,deleteNumber,insertItem)
@@ -364,21 +364,21 @@
 // console.log(arr.splice(0,0,1),arr);
 
 /*
-    Array.prototype.toLocaleString()
+    33Array.prototype.toLocaleString()
     返回一个字符串表示数组中的元素
  */
 // let arr = [1,2,3,null,undefined,{},true];
 // console.log(arr.toLocaleString());//output:1,2,3,,,[object Object],true
 
 /*
-    Array.prototype.toString()
+    34Array.prototype.toString()
     返回一个字符串表示指定的数组及元素
  */
 // let arr = [12,'34',null,undefined,{},true];
 // console.log(arr.toString() === arr.toLocaleString());//output:true
 
 /*
-    Array.prototype.unshift()
+    35Array.prototype.unshift()
     和push方法类似
     返回新数组长度
     改变数组
@@ -387,7 +387,7 @@
 // console.log(arr.unshift(0,null),arr);//output:5,[ 0, null, 1, 2, 3 ]
 
 /*
-    Array.prototype.values()
+    36Array.prototype.values()
     和keys() entries()方法类似 ->返回的是索引对应的值
  */
 // let arr = ['a','b','c'];
