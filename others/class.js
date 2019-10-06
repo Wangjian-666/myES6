@@ -178,6 +178,35 @@ class Child6 extends Parent6 {
         super.pM();
     }
 }
-Child6.childM();//output:Child6 ->Child6.name
-let child6 = new Child6();
-child6.childM();
+// Child6.childM();//output:Child6 ->Child6.name
+// let child6 = new Child6();
+// child6.childM();
+
+
+/*
+    类的prototype属性和__proto__属性
+    子类的__proto__属性表示构造函数的继承，总是指向父类
+    子类的prototype.__proto__ 属性表示方法的继承，总是指向父类的prototype
+
+ */
+class Parent7 {
+    constructor() {
+
+    }
+}
+class Child7 extends Parent7 {
+
+}
+// console.log(Child7.__proto__ === Parent7,Child7.prototype.__proto__ === Parent7.prototype);
+//output:true true
+let _parent = class {
+
+};
+let _child = class {
+
+};
+// Object.setPrototypeOf(_child,_parent);
+// Object.setPrototypeOf(_child.prototype,_parent.prototype);
+// console.log(_child.__proto__ === _parent,_child.prototype.__proto__ === _parent.prototype);
+//output:true true
+
