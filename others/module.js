@@ -5,4 +5,5 @@
     1,import
     2,export
     3,as
+    4,default
  */
